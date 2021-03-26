@@ -4,11 +4,11 @@
 #define sensorPin (7)               // TODO INSERIR NUMERO DO PIN
 #define okCorPin (15)               // TODO INSERIR NUMERO DO PIN
 #define okAmoPin (16)               // TODO INSERIR NUMERO DO PIN
-#define OK (1)
-#define NOTOK (2)
-#define OCUPADO (3)
-#define DESOCUPADO (4)
-#define ALARME (8)
+#define OK (1)                      // TODO INSERIR NUMERO DO PIN
+#define NOTOK (2)                   // TODO INSERIR NUMERO DO PIN
+#define OCUPADO (3)                 // TODO INSERIR NUMERO DO PIN
+#define DESOCUPADO (4)              // TODO INSERIR NUMERO DO PIN
+#define ALARME (8)                  // TODO INSERIR NUMERO DO PIN
 int contador;
 
 void setup()
@@ -55,7 +55,7 @@ void loop()
       // ? SE SENSOR E CONTADOR > 1 DOU NOT OK E OCUPADO
       digitalWrite(NOTOK, HIGH);
       digitalWrite(OCUPADO, HIGH);
-      while (saidaPessoa(sonar_corredorPin) != 0); // ? ESPERA QUE A PESSOA SAIR
+      while (saidaPessoa(sonar_amoedacaoPin) != 0); // ? ESPERA QUE A PESSOA SAIR
       if (digitalRead(sensorPin) == LOW)
       {
         // ? VALIDA QUE AS PESSOAS SAIRAM
